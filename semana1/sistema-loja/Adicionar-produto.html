@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Home.css">
     <title>Casa Forte</title>
 </head>
 <body>
@@ -15,8 +16,9 @@
     <a href="Funcionario.html">Funcionários</a><br>
 
     <h3>Adicione produtos em sua loja</h3>
+    
     <form action="#">
-        
+        <div class="adicionar-produtos">  
         <label for="produtos">Produtos da Loja</label> 
         <input type="hidden" name="imagem" id="produtos"> 
         <input type="file" /> <br><br>
@@ -30,11 +32,15 @@
 
         <label for="quantidade">Quantidade</label> 
         <input type="text" name="quantidade" id="quantidade"> <br><br>
-
-
-       
+   
         <button type="submit">Enviar</button>
     </form>
+    </div>
+
+    <div class="footer">
+        <p>Endereço: R. Geraldo Rebelo, 1130 TIjucas - SC, 88200-000
+        </p>
+    </div>
 
 </body>
 </html>
