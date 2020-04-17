@@ -1,0 +1,25 @@
+
+
+/* Texto contato */
+.texto-contato {
+     color: rgb(0, 0, 0);
+    font-size: 14px;
+    text-align: justify;
+    margin-top: 4%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    margin-right: 55%;
+}
+
+/* Formulário */
+.formulario {
+    color: rgb(0, 0, 0);
+   font-size: 15px;
+   text-align: justify;
+   margin-top: -17%;
+   margin-bottom: 0%;
+   margin-left: 51%;
+   margin-right: 0%;
+   }
+
+
