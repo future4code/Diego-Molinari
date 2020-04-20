@@ -1,0 +1,21 @@
+/* Titulo Projetos */
+.titulo-projetos {
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: left;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 55%;
+ }
+
+.menu-de-projetos{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+

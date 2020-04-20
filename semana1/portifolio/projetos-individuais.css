@@ -1,0 +1,41 @@
+/* Nome do projeto */
+.nome-projeto {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 55%;
+    }
+
+/* Descrição do projeto */   
+#descrição-do-projeto {
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: justify;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 55%;
+}
+
+.tecnologias{
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    text-align: left;
+    margin-top: -8%;
+    margin-bottom: 0%;
+    margin-left: 5%;
+    margin-right: 0%;
+}
+
+/* Imagem página inicial */   
+.imagemprojetos {
+        text-align: center;
+        width: 35%; 
+        height: 35%;
+        margin-top: -50%;
+        margin-bottom: 0%;
+        margin-left: 60%;
+        margin-right: 0%;
+        }
