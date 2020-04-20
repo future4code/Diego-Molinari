@@ -77,12 +77,20 @@ div img {
 
 #container-para-comprar {
     background-color: #e7eb90;
+    position: relative;
+}
+
+.botao-amarelo {
+    position: absolute;
+    top: 90px;   
+    left: 41%;
 }
 
 #container-para-comprar>p {
     color: #c44f00;
     padding: 100px 0;
     font-size: 60px;
+
 }
 
 
