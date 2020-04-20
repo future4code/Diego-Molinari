@@ -69,7 +69,13 @@ div img {
 #container-de-descricao {
     background-color: #2274a5;
     color: white;
+    position: relative;
+    text-align: center;
+    padding-top: 150px;
+    height: 250px;
 }
+
+
 
 #container-de-descricao>ol {
     padding: 15px 0px;
