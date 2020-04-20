@@ -146,3 +146,10 @@ td{
 #back-button:hover {
     background-color: #635a3d
 }
+
+.fotos {
+    max-width:60px;
+    max-height:60px;
+    width: auto;
+    height: auto;
+}
