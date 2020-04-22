@@ -1,0 +1,69 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+
+.container { 
+    background-color: #A8BBC6;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(20 x 1fr);
+}
+
+#header {
+    background-color: #38ca49;
+
+    color: white;    
+    /*verde*/
+}
+
+#menu {
+    background-color: #feda31;
+    color: white;
+    /*amarelo*/    
+}
+
+.container2 { 
+    display: grid;    
+}
+
+#content1 {
+    background-color: #ed25bc;
+    color: white;   
+    /*Rosa*/
+}
+
+.container3 { 
+    display: grid;       
+}
+
+#content2 {
+    background-color: #1277d6;
+    color: white;    
+    /*azul*/
+}
+
+#image {
+    background-color: #fc433e;
+    color: white;    
+    /*vermelho*/
+}
+
+#extra {
+    background-color: #2afd77;
+    color: white;    
+    /*verde-claro*/
+}
+
+
+.container4 { 
+    display: grid;    
+}
+
+#footer {
+    background-color: #af22c6;
+    color: white;    
+    /*roxo*/
+}
+
