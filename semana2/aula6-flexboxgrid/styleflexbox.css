@@ -1,0 +1,92 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+
+.container1 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;   
+}
+
+#header {
+    background-color: #38ca49;
+    color: white;
+    flex-basis: 25%;
+    height: 47px;
+    order: 0;
+    align-items: center;
+    /*verde*/
+}
+
+#menu {
+    background-color: #feda31;
+    color: white;
+    flex-basis: 75%;
+    height: 47px;
+    order: 1;
+    /*amarelo*/    
+}
+
+.container2 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;   
+}
+
+#content1 {
+    background-color: #ed25bc;
+    color: white;
+    height: 473px;
+    flex-basis: 100%;
+    /*Rosa*/
+}
+
+.container3 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+}
+
+#content2 {
+    background-color: #1277d6;
+    color: white;
+    height: 188px;  
+    width: 50%;  
+    /*azul*/
+}
+
+#image {
+    background-color: #fc433e;
+    color: white;
+    height: 92px; 
+    width: 25%;
+    align-self: flex-start;
+        /*vermelho*/
+}
+
+#extra {
+    background-color: #2afd77;
+    color: white;
+    height: 94px;
+    width: 25%;
+    
+    align-self: flex-end;
+    /*verde-claro*/
+}
+
+.container5 { 
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; 
+}
+
+#footer {
+    background-color: #af22c6;
+    color: white;
+    flex-basis: 100%;
+    height: 46px;
+    /*roxo*/
+}
+
