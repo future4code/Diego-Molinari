@@ -164,8 +164,94 @@
     align-items: center;
 }
 
-@media screen and (max-width:600px) {
+@media screen and (max-width:320px) {
     .container-retangulos {
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, 1fr);
+    }
+    
+    .vermelho {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 1/2;
+        min-width: 320px;
+        max-height: auto;
+    }
+
+    .elemento1{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        min-width: 320px;
+        max-height: 100px;
+    }
+    .elemento2{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 3/4;
+        min-width: 320px;
+        max-height: 100px;
+    }
+    .elemento3{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 4/5;
+        min-width: 320px;
+        max-height: 100px;
+    }
+    .elemento4{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 5/6;
+        min-width: 320px;
+        max-height: 100px;
+    }
+
+    .elemento5 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 6/7;
+        min-width: 320px;
+        max-height: 100px;
+    }
+
+    .elemento6 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 7/8;
+        min-width: 320px;
+        max-height: 100px;
+    }
+
+    .preto{
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 8/9;
+        min-width: 320px;
+        max-height: 100px;
+    }
+
+    .elemento7 {
+        display: grid;
+        grid-column: 1/2;
+        grid-row: 8/9;
+        min-width: 320px;
+        max-height: 100px;
+         
+    }
+        
+    .elemento8{
+        display: none;
+    }
+    .elemento9{
+        display: none; 
+    }
+    .elemento10{
+        display: none;
+    }
+    .elemento11{
         display: none;
     }
 }
