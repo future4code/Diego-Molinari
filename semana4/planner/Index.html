@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="planner.js" defer></script>
+    <link href="planner.css" type="text/css" rel="stylesheet" />
+    <title>Diego's Planner</title>
+  </head>
+
+  <body>
+    <h2>Planejamento Semanal</h2>
+
+    <div class="containerParaEscolherDia">
+
+      <h3 for="">Digite sua tarefa e seja feliz :) </h3>
+      <input type="text" id="tarefa" placeholder="Digite aqui" value="">
+
+      <select id="diaEscolhido">
+        <option value="domingo">Domingo</option>
+        <option value="segunda">Segunda-feira</option>
+        <option value="terca">Terça-feira</option>
+        <option value="quarta">Quarta-feira</option>
+        <option value="quinta">Quinta-feira</option>
+        <option value="sexta">Sexta-feira</option>
+        <option value="sabado">Sábado</option>
+      </select>
+
+      <button value="" id="add" onclick="criar()">Add</button>
+    </div>
+
+    <hr>
+
+    <div id="containerDosDias" class="containerBackgroudTabela">
+
+      <div id="domingo" class="tarefasSemana"><h3>Domingo</h3>
+        <ul id="tarefaDomingo"></ul>
+      </div>
+
+      <div id="segunda" class="tarefasSemana"><h3>Segunda-feira</h3>
+        <ul id="tarefaSegunda"></ul>
+      </div>
+      
+      <div id="terca" class="tarefasSemana"><h3>Terça-feira</h3>
+        <ul id="tarefaTerca"></ul>
+      </div>
+
+      <div id="quarta" class="tarefasSemana"><h3>Quarta-feira</h3>
+        <ul id="tarefaQuarta"></ul>
+      </div>
+
+      <div id="quinta" class="tarefasSemana"><h3>Quinta-feira</h3>
+        <ul id="tarefaQuinta"></ul>
+      </div>
+
+      <div id="sexta" class="tarefasSemana"><h3>Sexta-feira</h3>
+        <ul id="tarefaSexta"></ul>
+      </div>
+
+      <div id="sabado" class="tarefasSemana"><h3>Sábado</h3>
+        <ul id="tarefaSabado"></ul>
+      </div>
+
+    </div>
+
+    <footer><h3>Aumente sua produtividade, preencha a tabela com suas tarefas da semana</h3></footer>
+   
+  </body>
+</html>
