@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Resumo Financeiro</title>
+</head>
+<body>
+    <main>
+        <h1> Resumo Financeiro</h1>
+        <section>
+            <h2>Controlar de Despesas </h2>
+            <h3>Cadastrar despesas</h3>
+            <form action="">
+                <label  for="valor">Valor: </label><input  id="valor" type="number"> 
+                <select name="" id="tipo">
+                    <option value="cerveja">Cerveja</option>
+                    <option value="vodka">Vodka</option>
+                    <option value="whisky">Whisky</option>
+                </select>
+                <textarea id="descricao" name="" cols="30" rows="6"></textarea> 
+            </form>
+            <button onclick="cadastrarDespesas(event)">Cadastrar Despesa</button>
+        </section>
+
+        <section>
+            <h2>Despesa Detalhada </h2>
+            <form action="">  Tipo: (Cerveja, Vodka ou Whisky)
+                <select name="">
+                    <option value="cerveja">Cerveja</option>
+                    <option value="vodka">Vodka</option>
+                    <option value="whisky">Whisky</option>
+                </select>
+                <label for="valorMinimo">Valor Minimo: </label><input type="number">
+                <label for="valorMaximo">Valor Maximo: </label><input type="number">
+            </form>
+            <button onclick="filtrarDespesas()"> Filtrar</button>
+            <button onclick="limparFiltro()">Limpar filtro</button>
+        </section>
+
+        <section>
+            <h2>Extrato Final </h2>
+            <h3>Valor Total: </h3>
+        </section>
+    </main>    
+</body>
+</html>
