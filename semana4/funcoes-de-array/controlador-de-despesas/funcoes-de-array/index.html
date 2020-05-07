@@ -17,28 +17,40 @@
             <form action="">
                 <label  for="valor">Valor: </label><input  id="valor" type="number"> 
                 <select name="" id="tipo">
+                    <option value="">Selecione uma opção</option>
                     <option value="cerveja">Cerveja</option>
                     <option value="vodka">Vodka</option>
                     <option value="whisky">Whisky</option>
                 </select>
-                <textarea id="descricao" name="" cols="30" rows="6"></textarea> 
+                <input id="descricao" name="" cols="30" rows="6"></input> 
             </form>
             <button onclick="cadastrarDespesas(event)">Cadastrar Despesa</button>
         </section>
 
+
+
+
+
+
+
+
+
+
         <section>
             <h2>Despesa Detalhada </h2>
             <form action="">  Tipo: (Cerveja, Vodka ou Whisky)
-                <select name="">
+                <select name="" id="categoria">
+                    <option value="">Selecione uma opção</option>
                     <option value="cerveja">Cerveja</option>
                     <option value="vodka">Vodka</option>
                     <option value="whisky">Whisky</option>
                 </select>
-                <label for="valorMinimo">Valor Minimo: </label><input type="number">
-                <label for="valorMaximo">Valor Maximo: </label><input type="number">
+                <label id="valorMinimo" for="valorMinimo">Valor Minimo: </label><input type="number">
+                <label id="valorMaximo" for="valorMaximo">Valor Maximo: </label><input type="number">
             </form>
-            <button onclick="filtrarDespesas()"> Filtrar</button>
+            <button onclick="filtraValor()"> Filtrar</button>
             <button onclick="limparFiltro()">Limpar filtro</button>
+            <div id="mostraDespesa"> </div>
         </section>
 
         <section>
