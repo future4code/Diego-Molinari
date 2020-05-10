@@ -108,6 +108,16 @@ console.log(classificaTriangulo(10, 9, 7));
 
 //-----------------------------------------------------------------------------------------------------------------------------------------------
 
+// Exercícios de Funções //
+
+/* 1 -  */
+// ixi batendo a cabeça nesse exercício 1
+
+/* 2 -  */
+let funcaoNaoNomeada = function(texto) {
+    alert(texto);
+}
+funcaoNaoNomeada("Hello Future4");
 
 
 
