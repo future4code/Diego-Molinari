@@ -113,19 +113,64 @@ console.log(classificaTriangulo(10, 9, 7));
 /* 1 -  */
 // ixi batendo a cabeça nesse exercício 1
 
-/* 2 -  */
+/* 2 -  
 let funcaoNaoNomeada = function(texto) {
     alert(texto);
 }
 funcaoNaoNomeada("Hello Future4");
+*/
+
+//-----------------------------------------------------------------------------------------------------------------------------------------------
+
+// Exercícios de Objetos //
+/*1 - Arrays podem ser considerados grupos que guardam informações que podem ser acessadas a posteriori, já objetos são 
+estruturas que guardam um grande volume de informações que podem ser mais complexas. os objetos possuem estrutura de chaves e valores que 
+permitem identificar as variaveis*/
+
+/* 2 -  
+
+function criaRetangulo(lado1, lado2) {
+    const retangulo = {
+        largura: lado1,
+        altura: lado2,
+        perimetro: (2 * (lado1 + lado2)),
+        area: (lado1 * lado2)
+    }
+    return retangulo
+}
+console.log(criaRetangulo(5, 8))
 
 
+3 - 
+
+const meuFilmeFavorito = {
+    titulo: "Clube da Luta",
+    ano: 1999,
+    diretor: "David Fincher",
+    atores: ["Edward Norton", "Brad Pitt ", "Helena Bonham Carter ", "Meat Loaf ", "Zach Grenier ", "Rachel Singer " ],
+}
+console.log (`Venha assistir ao filme ${meuFilmeFavorito.titulo} do ano de ${meuFilmeFavorito.ano}, dirigido por ${meuFilmeFavorito.diretor} e estrelado por ${meuFilmeFavorito.atores} `)
 
 
+4 - 
 
+const pessoaQualquer = {
+    nome: "Diego",
+    idade: 30,
+    email: "diego.tj.molinari@gmail.com",
+    endereco: "Rua Geral Oliveira"
+}
 
-        
+function anonimizarPessoa() {
+    const ficouAnonimo = {
+        ...pessoaQualquer,
+        nome: "Anônimo"
+    }
+    return ficouAnonimo;
+}
+console.log(pessoaQualquer);
+console.log(anonimizarPessoa());
 
-    
-
+*/
  
+//-----------------------------------------------------------------------------------------------------------------------------------------------
