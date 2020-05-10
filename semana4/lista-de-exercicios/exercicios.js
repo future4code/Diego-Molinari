@@ -9,18 +9,14 @@ Após isso, é impresso no terminal uma mensagem dizendo o valor convertido "R$(
 uma variável declarada (valorAposInvestimento), a função tem continuidade com uma condicional (switch) que com de acordo do tipo de investimento 
 escolhido pelo usuário determinara o valor após investimento. Depois da função fechada temos duas consts na qual o usuário informa o tipo de 
 investimento e o valor após isso o console.log vai printar no terminal o valores. na const novoMontante, vai ser impresso "165" já na const 
-segundoMontante vai devolver um alerta informando "tipo de investimento incorreto", pois não tem Tesouro direto dentro do Switch */
+segundoMontante vai devolver um alerta informando "tipo de investimento incorreto", pois não tem Tesouro direto dentro do Switch 
 
-const numeros = [25, 12, 55, 64, 121, 44, 11, 84, 51, 48, 14, 73, 111, 283];
-const array1 = [];
-const array2 = [];
-for(let numero of numeros) {
-    if(numero % 2 === 0) {
-        array1.push(numero);
-    } else {
-        array2.push(numero);
-    }
-}
-console.log("Quantidade totalde números", numeros.length)
-console.log(array1.length)
-console.log(array2.length)
+3- Temos 3 arrays, um de números com vários elementos dentro e dois arrays vazios (array1 e arrey2). Apos isso temos uma condição com um calculo 
+para que incluirá os números pares presentes no array numeros no array1 e o restante (numeros impares) serão incluidos no array2. 
+Irá ser impresso no console uma frase com a quantidade de numeros total no array de números, e também a quantidade de numeros presentes 
+no array1 e no array2 
+
+4 - 4 - Temos um Array de números com 25 elementos dentro e duas variaveis (numero1 e numero2). Com isso o programa irá analisar o array 
+de números. se o array de numeros tem um numero menor que o infinito ele irá retornar esse numero para a variavel numero1 e depois ele vai 
+checar o menor numero presente no array de numeros e retornar para a variável numero2. No final do codigo o console irá printar no terminal 
+os dois valores obtidos:  -10 e 1590. */
