@@ -125,9 +125,9 @@ funcaoNaoNomeada("Hello Future4");
 // Exercícios de Objetos //
 /*1 - Arrays podem ser considerados grupos que guardam informações que podem ser acessadas a posteriori, já objetos são 
 estruturas que guardam um grande volume de informações que podem ser mais complexas. os objetos possuem estrutura de chaves e valores que 
-permitem identificar as variaveis*/
+permitem identificar as variaveis
 
-/* 2 -  
+2 -  
 
 function criaRetangulo(lado1, lado2) {
     const retangulo = {
@@ -171,6 +171,194 @@ function anonimizarPessoa() {
 console.log(pessoaQualquer);
 console.log(anonimizarPessoa());
 
-*/
+
  
 //-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+//Exercícios de Funções de array//
+
+1 - a)
+
+const arrayOriginal = [
+    { nome: "Pedro", idade: 20 },
+    { nome: "João", idade: 10 },
+    { nome: "Paula", idade: 12 },
+    { nome: "Artur", idade: 89 },
+]
+
+const arrayAdultos = arrayOriginal.filter((pessoa, index, array) => {
+    if (pessoa.idade >= 20) {
+        return {
+            nome: pessoa.nome,
+            idade: pessoa.idade,
+        }
+    }
+})
+console.log(arrayOriginal)
+console.log(arrayAdultos)
+
+b ) 
+
+const arrayOriginal = [
+    { nome: "Pedro", idade: 20 },
+    { nome: "João", idade: 10 },
+    { nome: "Paula", idade: 12 },
+    { nome: "Artur", idade: 89 },
+]
+
+const arrayMenores = arrayOriginal.filter ((pessoa, index, array) => {
+    if (pessoa.idade < 20) {
+        return {
+            nome: pessoa.nome,
+            idade: pessoa.idade,
+        }
+    }
+})
+console.log(arrayOriginal)
+console.log(arrayMenores)
+
+
+
+2 - a)
+const arrayOriginal = [1, 2, 3, 4, 5, 6]
+
+const multiplosDeDois = arrayOriginal.map((numero, index, array) => {
+    return numero * 2
+})
+
+console.log(arrayOriginal)
+console.log(multiplosDeDois)
+
+
+b)
+
+const arrayOriginal = [1, 2, 3, 4, 5, 6]
+
+const multiplosDeTres = arrayOriginal.map((numero, index, array) => {
+    return numero * 3
+})
+console.log(arrayOriginal)
+console.log(multiplosDeTres)
+
+
+const arrayOriginal = [1, 2, 3, 4, 5, 6];
+
+function multiploDeTres(array) {
+    const array3 = array.map((numero) => {
+        return `${numero *3}`;
+    })
+    return array3;
+    }
+let arrayTriplicado = multiploDeTres(arrayOriginal)
+console.log(arrayTriplicado)
+
+
+
+//c)
+function verificaParOuImpar(array) {
+    const arrayParOuImpar = array.map((elemento, index, array) =>{
+        if (elemento % 2 == 0) {
+            return `${elemento} é par`
+        }
+        else {
+            return `${elemento} é impar`
+        }
+    })
+    return arrayParOuImpar 
+}
+
+let arrayParOuImpar = verificaParOuImpar(arrayOriginal)
+console.log(arrayParOuImpar)
+
+//fiquei um dia nesse exercício 2 
+
+
+
+/* 3) 
+const pessoas = [
+    { nome: "Paula", idade: 12, altura: 1.8},
+    { nome: "João", idade: 20, altura: 1.3},
+    { nome: "Pedro", idade: 15, altura: 1.9},
+    { nome: "Luciano", idade: 22, altura: 1.8},
+    { nome: "Artur", idade: 10, altura: 1.2},
+    { nome: "Soter", idade: 70, altura: 1.9}
+]
+
+//a)
+const pessoasPermitidas = pessoas.filter((pessoa, index, array) => {
+    if (pessoa.idade > 14 && pessoa.idade < 60 && pessoa.altura >= 1.5) {
+        return {
+            nome: pessoa.nome,
+            idade: pessoa.idade,
+            altura: pessoa.altura
+        }
+    }
+})
+
+console.log(pessoas)
+console.log(pessoasPermitidas)
+
+//b)
+const pessoasProibidas = pessoas.filter((pessoa, index, array) => {
+    if (pessoa.idade <= 14 || pessoa.idade >= 60 || pessoa.altura < 1.5) {
+        return {
+            nome: pessoa.nome,
+            idade: pessoa.idade,
+            altura: pessoa.altura
+        }
+    }
+})
+
+console.log(pessoas)
+console.log(pessoasProibidas)*/
+
+
+/* 4) 
+
+const consultas = [
+    { nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+    { nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+    { nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+    { nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const consultasMarcadas = consultas.map((consulta) =>
+{
+    if(consulta.genero === "masculino" && consulta.cancelada == false ) 
+    {
+        return (`Olá, Sr. ${consulta.nome} Estamos enviando esta mensagem para lembrá-lo  da sua consulta no dia ${consulta.dataDaConsulta} . Por favor, acuse o recebimento deste e-mail.`)
+    } else if (consulta.genero === "feminino" && consulta.cancelada == false ) 
+    {
+        return (`Olá, Sra. ${consulta.nome} Estamos enviando esta mensagem para lembrá-la  da sua consulta no dia ${consulta.dataDaConsulta} . Por favor, acuse o recebimento deste e-mail.`)
+    } 
+})
+
+console.log(consultasMarcadas)
+
+const consultasCanceladas = consultas.map((consulta2) =>{
+    if( consulta2.genero === "masculino" && consulta2.cancelada === true )
+    {
+        return (`Olá, Sr. ${consulta2.nome}. Infelizmente, sua consulta marcada para o dia ${consulta2.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+    } else if (consulta2.genero === "feminino" && consulta2.cancelada === true ){
+        return (`Olá, Sra. ${consulta2.nome}. Infelizmente, sua consulta marcada para o dia ${consulta2.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`)
+    }
+})
+
+console.log(consultasCanceladas)
+*/
+
+
+/* 5)   
+
+const contas = [
+    { cliente: "João", saldoTotal: 1000, compras: [100, 200, 300] },
+    { cliente: "Paula", saldoTotal: 7500, compras: [200, 1040] },
+    { cliente: "Pedro", saldoTotal: 10000, compras: [5140, 6100, 100, 2000] },
+    { cliente: "Luciano", saldoTotal: 100, compras: [100, 200, 1700] },
+    { cliente: "Artur", saldoTotal: 1800, compras: [200, 300] },
+    { cliente: "Soter", saldoTotal: 1200, compras: [] }
+]
+
+*/
+
