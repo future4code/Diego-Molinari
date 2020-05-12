@@ -1,0 +1,26 @@
+.competencias-container {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    padding: 20px 10px;
+    margin-bottom: 10px;
+    height: 200px;
+}
+
+.competencias-container > img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+
+.competencias-container h4 {
+    margin-bottom: 15px;
+}
+
+.competencias-container > div {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+}
+
