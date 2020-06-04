@@ -1,0 +1,289 @@
+{
+	"info": {
+		"_postman_id": "e4629e02-9a6f-4066-8c8b-6704e2082063",
+		"name": "Labefy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Samba\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					]
+				},
+				"description": "Criação da playslist com o gênero de música"
+			},
+			"response": []
+		},
+		{
+			"name": "get All Playlists",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists?quantity&list&id&name=Rock",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists"
+					],
+					"query": [
+						{
+							"key": "quantity",
+							"value": null
+						},
+						{
+							"key": "list",
+							"value": null
+						},
+						{
+							"key": "id",
+							"value": null
+						},
+						{
+							"key": "name",
+							"value": "Rock"
+						}
+					]
+				},
+				"description": "Ver todas as Playlists"
+			},
+			"response": []
+		},
+		{
+			"name": "add Track To Playlist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Mas que nada\",\n\t\"artist\": \"Jorge Ben Jor\",\n\t\"url\": \"https://open.spotify.com/track/1Nov1m4HA8PBs2vyWjp2Cv?si=0P5CL9FOQx-Dqn34--Wn8Q\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "b158e8ce-91c4-4f2e-be8c-60b0a760521d"
+						}
+					]
+				},
+				"description": "Adcionar musica a playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "get Playlist Tracks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "3551244f-7f19-467c-9f62-07adbf6cb6ba"
+						}
+					]
+				},
+				"description": "Pegar cada track"
+			},
+			"response": []
+		},
+		{
+			"name": "search Playlist",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/search?name=Rock&=",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Rock"
+						},
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				},
+				"description": "Procurar Playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "remove Track From Playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId/tracks/:trackId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId",
+						"tracks",
+						":trackId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "62573231-01fe-4450-a96e-d6d5ca8f683d"
+						},
+						{
+							"key": "trackId",
+							"value": "1e79a67b-7e02-4a2c-8266-8ef801a9799d"
+						}
+					]
+				},
+				"description": "Remover uma música da playlist"
+			},
+			"response": []
+		},
+		{
+			"name": "delete Playlist",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "diego-molinari-mello",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId",
+					"protocol": "https",
+					"host": [
+						"us-central1-labenu-apis",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"labefy",
+						"playlists",
+						":playlistId"
+					],
+					"variable": [
+						{
+							"key": "playlistId",
+							"value": "da43e8fb-464e-41de-9423-f4d3fc256d1b"
+						}
+					]
+				},
+				"description": "Apagar playlist"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
