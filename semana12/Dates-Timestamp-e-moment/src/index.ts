@@ -1,5 +1,4 @@
 import moment from 'moment';
-
 moment.locale('pt-br');
 
 type event = {
@@ -11,21 +10,21 @@ type event = {
 
 let allEvents: event[] = [
   {
-    name: 'Aniversário do Pai',
-    description: 'levar bebida',
-    initDate: moment('29/10/2020 19:00', 'DD/MM/YYYY HH:mm'),
-    endDate: moment('29/10/2020 22:00', 'DD/MM/YYYY HH:mm'),
+    name: `Aniversário do Pai`,
+    description: `Festa aqui em casa`,
+    initDate: moment(`29/09/2020 19:00`, `DD/MM/YYYY HH:mm`),
+    endDate: moment(`29/09/2020 23:00`, `DD/MM/YYYY HH:mm`),
   },
+
   {
-    name: 'Aprender TS',
-    description: 'Primeiras aulas de Typescript para o back-end',
-    initDate: moment('27/11/2020 09:00', 'DD/MM/YYYY HH:mm'),
-    endDate: moment('31/11/2020 17:00', 'DD/MM/YYYY HH:mm'),
+    name: `Futebol de sexta`,
+    description: `Jogo de Futebol dos amigos`,
+    initDate: moment(`28/08/2020 19:00`, `DD/MM/YYYY HH:mm`),
+    endDate: moment(`28/08/2020 21:00`, `DD/MM/YYYY HH:mm`),
   },
 ];
 
 function showEvents() {
-  console.log('\n Eventos agendados:');
   allEvents.map((event) => {
     const eventDuration: number = event.endDate.diff(event.initDate, 'minutes');
     let daysLeft = event.initDate.diff(moment(), 'days');
@@ -35,9 +34,11 @@ function showEvents() {
       'dddd, DD [de] MMMM [de] YYYY, HH[h]mm',
     )}
     Horário de fim: ${event.endDate.format('DD [de] MMMM [de] YYYY, HH[h]mm')}
-    Descrição: ${event.description}
+    Descrição: ${event.description} 
     Duração: ${eventDuration} minutos
-    Dias até o evento: ${daysLeft}`);
+    Dias até o evento: ${daysLeft}
+    
+    `);
   });
 }
 
@@ -45,10 +46,10 @@ function createEvent() {
   let correctEvent = false;
   let correctDates = false;
   let newEvent: event = {
-    name: process.argv[4],
-    description: process.argv[5],
-    initDate: moment(process.argv[2], 'DD/MM/YYYY HH:mm'),
-    endDate: moment(process.argv[3], 'DD/MM/YYYY HH:mm'),
+    name: process.argv[2],
+    description: process.argv[3],
+    initDate: moment(process.argv[4], 'DD/MM/YYYY HH:mm'),
+    endDate: moment(process.argv[5], 'DD/MM/YYYY HH:mm'),
   };
   if (
     !newEvent.name ||
@@ -57,14 +58,14 @@ function createEvent() {
     !newEvent.endDate
   ) {
     console.log(
-      'Para adicionar um novo evento: Digite a data e hora de início, a data e hora de fim, o nome, e a descrição do evento',
+      'Para adicionar um novo evento escreva o mesmo no seguinte formado: nome_do_evento descrição_do_evento xx/xx/xxxx00:00 xx/xx/xxxx00:00',
     );
   } else {
     correctEvent = true;
   }
   if (newEvent.endDate.diff(newEvent.initDate, 'seconds') < 0) {
     console.log(
-      'PARADOXO TEMPORAL: a data final não pode vir antes que a inicial',
+      'Erro ao criar o evento, a data final é anterior a data inicial',
     );
   } else {
     correctDates = true;
@@ -73,7 +74,5 @@ function createEvent() {
     allEvents.push(newEvent);
   }
 }
-
 createEvent();
-
 showEvents();
