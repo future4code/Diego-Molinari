@@ -60,13 +60,14 @@ R - três vezes */
 
 import { Employee } from './Employee';
 import moment from 'Moment';
+import { Seller } from './Seller';
 const newEmployee: Employee = new Employee(
   '20',
   'employee1@gmail.com',
   'Employee1',
   '1234562',
   moment('01/09/2018', 'DD/MM/YYYY').format('DD/MM/YYYY'),
-  500,
+  400,
 );
 
 console.log(newEmployee);
@@ -94,7 +95,69 @@ Comece simplesmente criando a classe sem nenhuma propriedade, mas garantindo que
 
 As propriedades admissionDate e baseSalary foram criadas como protected para que elas não fossem acessadas fora da classe, mas pudessem ser acessadas pela classe filha. Quando já sabemos que uma classe terá filhas, a gente para para pensar: "o que eu quero que as filhas acessem?" e a resposta para essa pergunta nos dá as propriedades que devem ser protected. Normalmente, são propriedades "sensíveis" mas que são úteis dentro das filhas.
 
-a. Crie uma instância da classe Seller. Você vai reparar que essa classe já possui um construtor, pois quando não colocamos um construtor na classe filha, ela herda o construtor da classe Pai. Quais parâmetros você teve que passar para esse construtor?
+a. Crie uma instância da classe Seller. Você vai reparar que essa classe já possui um construtor, pois quando não colocamos um construtor na classe filha, ela herda o construtor da classe Pai. Quais parâmetros você teve que passar para esse construtor? 
+R- Tive que passar todos os paramentros para criar uma instancia da classe Employee*/
+const newSeller: Seller = new Seller(
+  '12',
+  'seller@gmail.com',
+  'Seller1',
+  '123587',
+  moment('21/04/2017', 'DD/MM/YYYY').format('DD/MM/YYYY'),
+  400,
+);
 
+/*
 b. Imprima todas as informações da instância que você criou individualmente (ou seja, cada uma em uma linha própria). O que você conseguiu imprimir? O que não conseguiu? Por quê? 
-*/
+R- Todas as informações, exceto o password */
+console.log('Ex.8----------------------------------------------');
+console.log('ID do Vendedor: ', newSeller.getId());
+console.log('Nome do Vendedor: ', newSeller.getName());
+console.log('E-mail do Vendedor: ', newSeller.getEmail());
+console.log('Data de Admissão do Vendedor: ', newSeller.getAdmissionDate());
+console.log(`Salario Base do Vendedor: R$`, newSeller.getBaseSalary());
+console.log('----------------------------------------------');
+
+/* Exercício 9.
+Adicione uma nova propriedade para a classe `Seller`: `salesQuantity` (quantidade de vendas). Ela deve ser um `number`, ser privada, começar com o valor `0` e não pode estar no construtor (não há um motivo para isso, é só para você  se acostumar com o fato de que **não é obrigatório** colocar todas as propriedades no construtor). Por ser privada, crie um método setter `setSalesQuantity` que permita atualizar o valor dessa propriedade.
+
+a. Agora, teste o método setter, atualizando esse valor para o que você quiser. É possível imprimir no terminal o valor salesQuantity da instância que você criou? Por quê?
+R- Não podemos visualizr o valor da quantidade de venda pois o atributo salesquantity é privado e não temos um getter para acessar */
+console.log(
+  'Valor de Sales quantity antes de ser atualizado ',
+  newSeller.getSalesQuantity(),
+);
+newSeller.setSalesQuantity(34);
+console.log(
+  'Valor de Sales quantity após de ser atualizado ',
+  newSeller.getSalesQuantity(),
+);
+
+/* Exercício 10.
+Uma classe filha consegue sobrescrever  (override) um método da sua classe pai, se ela tiver acesso a ele (ou seja, se for  protected ou public). Para exemplificar isso, vamos pedir para que você altere a implementação da função calculateTotalSalary na classe Seller. Agora, ela deve calcular o salário total, seguindo a fórmula: 
+Considere que todos os vendedores recebam a mesma comissão de: R$5 por venda.
+
+a. Crie um novo vendedor. Atribua a ele um valor para a salesQuantity. Convoque a função calculateTotalSalary e  imprima no terminal o valor. O que foi impresso no terminal? Por quê?
+R- Foi impresso no terminal o salario total do vendedor. Salario base + comissão por venda*/
+const sellerNumber2: Seller = new Seller(
+  '54',
+  'seller2@gmail.com',
+  'Seller2',
+  '547896321',
+  moment('01/08/2017', 'DD/MM/YYYY').format('DD/MM/YYYY'),
+  289,
+);
+sellerNumber2.setSalesQuantity(148);
+console.log('Salário total do vendedor é: R$', sellerNumber2.calculateTotalSalary());
+
+/* Exercício 11.
+Para finalizar os conceitos aprendidos em aula, vamos criar agora duas propriedades estáticas. Essas propriedades são valores que não dependem da instância da classe. Normalmente, também são valores que não mudam muito ao longo da nossa aplicação (mas podemos mudar se precisarmos).
+
+Quais são as informações que criamos que são iguais para todas as instâncias das nossas classes? No caso da classe Employee temos o valor dos benefícios (de R$400) que é igual para todos os funcionários. Já na classe Seller, temos o valor da comissão (R$5). Então seria interessante que essas duas propriedades fossem estáticas. 
+
+Comece criando, na classe Employee, um atributo estático (static) que represente o valor dos benefícios (BENEFITS_VALUE) que tenha o valor 400. Altere o método calculateTotalSalary da classe Employee para que ele utilize essa propriedade em seu cálculo.
+
+Agora crie, na classe Seller, um atributo estático (static) que represente o valor das comissões (SELLING_COMMISSION) que tenha o valor 5. Por fim, altere o método calculateTotalSalary da classe Seller para que ele utilize os atributos estáticos em sua implementação.
+
+Perceba que a convenção de propriedades estáticas pede para colocarmos os nomes em "UnderScoreCase" (NOME_DA_VARIAVEL). Não é obrigatório isso para funcionar, mas é o padrão, a convenção*/
+
+
