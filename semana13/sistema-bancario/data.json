@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Diego",
+    "cpf": "17454819907",
+    "birthDate": "29091989",
+    "balance": 100,
+    "transactions": [
+      {
+        "value": 100,
+        "description": "Depósito de dinheiro",
+        "date": "31/08/2020"
+      }
+    ]
+  }
+]

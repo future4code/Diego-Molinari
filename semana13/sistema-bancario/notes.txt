@@ -1,0 +1,26 @@
+ESTRUTURA DE DADOS
+
+    Bank
+        Account
+            name 
+            cpf                     (1 por conta)     
+            birthDate               (age > 18)
+            balance               
+            Transaction
+                value               (< balance) 
+                description
+                date                (>= today)
+
+FUNCIONALIDADES
+
+    createAccount ( name, cpf, birthDate )
+
+    getBalance (name, cpf)
+
+    addBalance (name, cpf, value, today, "Depósito de dinheiro")
+
+    payBill (cpf, value, description, date)
+
+    makeTransfer( depositaryName, depositaryCpf, recipientName, recipientCpf, value)
+
+    updateBalance ()
