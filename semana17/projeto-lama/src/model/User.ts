@@ -47,6 +47,12 @@ export class User {
     this.role = role;
   }
 
+  public static toUserMode(object: any ): User{
+      return new User(object.id, object.name, object.email, object.password, object.role)
+  }
+
+
+
   static stringToUserRole(input: string): UserRole {
     switch (input) {
       case 'NORMAL':

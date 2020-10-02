@@ -3,7 +3,6 @@ import Knex from 'knex';
 
 export abstract class BaseDatabase {
   private static connection: Knex | null = null;
-
   protected getConnection(): Knex {
     if (!BaseDatabase.connection) {
       BaseDatabase.connection = knex({
@@ -26,5 +25,12 @@ export abstract class BaseDatabase {
       await BaseDatabase.connection.destroy();
       BaseDatabase.connection = null;
     }
+  }
+
+  protected convertIntToBoolean(value: number): boolean {
+    return value === 1;
+  }
+  protected convertBooleanToInt(value: boolean): number {
+    return value ? 1 : 0;
   }
 }
